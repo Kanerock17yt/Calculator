@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <input class="display" readonly>
+        <div class="keys">
+            <button onclick="appendOnDisplay('+')" class="operator-btn">+</button>
+            <button onclick="appendOnDisplay('7')">7</button>
+            <button onclick="appendOnDisplay('8')">8</button>
+            <button onclick="appendOnDisplay('9')">9</button>
+            <button onclick="appendOnDisplay('-')" class="operator-btn">-</button>
+            <button onclick="appendOnDisplay('4')">4</button>
+            <button onclick="appendOnDisplay('5')">5</button>
+            <button onclick="appendOnDisplay('6')">6</button>
+            <button onclick="appendOnDisplay('*')" class="operator-btn">*</button>
+            <button onclick="appendOnDisplay('1')">1</button>
+            <button onclick="appendOnDisplay('2')">2</button>
+            <button onclick="appendOnDisplay('3')">3</button>
+            <button onclick="appendOnDisplay('/')" class="operator-btn">/</button>
+            <button onclick="appendOnDisplay('0')">0</button>
+            <button onclick="appendOnDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button class="operator-btn" onclick="clearDisplay()">C</button>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal"> <!-- The thing when you type '666' -->
+        <div class="modal-content">
+            <p>Choose an option:</p>
+            <div class="button-group">
+                <button id="okBtn">OK</button>
+                <button id="goodbyeBtn">Goodbye</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottombar">
+        <p class="created">Created by: <a href="https://github.com/Kanerock17yt" class="userlink">Kane_rock17yt</a></p>
+        <br>
+        <p class="sourcecode">Source code: <a href="https://github.com/Kanerock17yt/Calculator" target="_blank">GitHub Repository</a></p>
+    </div>
+</body>
+</html>
