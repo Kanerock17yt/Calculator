@@ -16,6 +16,16 @@ function getDisplay() {
     return document.getElementsByClassName('display')[0];
 }
 
+// Function to play sound
+function playSound(audioFilePath) {
+  let audio = new Audio(audioFilePath);
+  audio.play()
+    .catch(error => {
+      console.error("Audio playback failed:", error);
+      // Handle cases where the browser blocks autoplay without user interaction
+    });
+}
+
 // Function to update the display
 function updateDisplay() {
     if (!displayElement) return;
@@ -65,6 +75,11 @@ function appendOnDisplay(input) {
         displayElement.style.color = 'red';
         modal.style.display = 'flex';
     }
+
+    if (currentText === '67') {
+        playSound('sfx/67.MP3');
+
+    }
 }
 
 // Function to clear the display
@@ -109,3 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.close();
     };
 });
+
+if (true) {
+    console.log('This is a calculator created by Kanerock17yt. If you have any questions or suggestions, feel free to contact me on GitHub!');
+}
